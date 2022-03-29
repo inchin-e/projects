@@ -17,4 +17,10 @@ The evaluation metric for this competition is the RMSLE (root mean squared log e
 
 For more on the evaluation of this project check: https://www.kaggle.com/c/bluebook-for-bulldozers/overview/evaluation
 
-### Note: The goal for most regression evaluation metrics is to minimize the error. For example, our goal for this project will be to build a machine learning model which minimises RMSLE.
+#### Note: The goal for most regression evaluation metrics is to minimize the error. For example, our goal for this project will be to build a machine learning model which minimises RMSLE.
+
+### 4. Libraries and frameworks
+- numpy
+- pandas
+- matplotlib
+- sklearn
