@@ -14,3 +14,11 @@ The data is downloaded from the Kaggle Bluebook for Bulldozers competition: http
 - test/ - the test files, which use the same structure as train/; your task is to predict the MGMT_value for each subject in the test data. NOTE: the total size of the rerun test set (Public and Private) is ~5x the size of the Public test set
 - sample_submission.csv - a sample submission file in the correct format
 
+### 3. Libraries and frameworks
+- numpy
+- pandas
+- matplotlib
+- torch
+- os
+- glob
+- pydicom
