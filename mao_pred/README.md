@@ -18,3 +18,9 @@ You have to predicting multiple targets of the Mechanism of Action (MoA) respons
 - train_targets_nonscored.csv - Additional (optional) binary MoA responses for the training data. These are not predicted nor scored.
 - test_features.csv - Features for the test data. You must predict the probability of each scored MoA for each row in the test data.
 - sample_submission.csv - A submission file in the correct format.
+
+### 3. Libraries and frameworks
+- numpy
+- pandas
+- matplotlib
+- lightgbm
