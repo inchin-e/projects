@@ -15,3 +15,10 @@ You are provided with a training set and a test set of images of dogs. Each imag
 - test.zip - the test set, you must predict the probability of each breed for each image
 - sample_submission.csv - a sample submission file in the correct format
 - labels.csv - the breeds for the images in the train set
+
+### 3. Libraries and frameworks
+- numpy
+- pandas
+- matplotlib
+- tensorflow
+- os
