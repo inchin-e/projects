@@ -50,6 +50,10 @@ ORDER BY COUNT(submissions.challenge_id) DESC, hackers.hacker_id;
 &nbsp;
 &nbsp;
 &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## PROBLEM 2 (Placements)
 
