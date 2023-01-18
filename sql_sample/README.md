@@ -15,14 +15,23 @@ The following tables contain contest data:
 #### SUBMISSION 1
 
 SELECT hackers.hacker_id,
+
         hackers.name
+        
 FROM hackers
+
     INNER JOIN submissions ON submissions.hacker_id=hackers.hacker_id
+    
     INNER JOIN challenges ON challenges.challenge_id=submissions.challenge_id
+    
     RIGHT JOIN difficulty ON difficulty.difficulty_level=challenges.difficulty_level
+    
 WHERE submissions.score=difficulty.score
+
 GROUP BY hackers.hacker_id, hackers.name
+
 HAVING COUNT(submissions.challenge_id)>1
+
 ORDER BY COUNT(submissions.challenge_id) DESC, hackers.hacker_id;
 
 
