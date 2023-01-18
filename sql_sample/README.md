@@ -12,7 +12,8 @@ The following tables contain contest data:
 •	Submissions: The submission_id is the id of the submission, hacker_id is the id of the hacker who made the submission, challenge_id is the id of the challenge that the submission belongs to, and score is the score of the submission. 
  
 
-#### SUBMISSION 1
+### SUBMISSION 1
+
 
 SELECT hackers.hacker_id,
 
