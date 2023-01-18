@@ -6,13 +6,18 @@ Input Format
 
 The following tables contain contest data:
 
- ![1-1](https://user-images.githubusercontent.com/49323906/213238312-0703d319-82ea-4782-a84e-7c3d06e07a41.png)
+•	Hackers: The hacker_id is the id of the hacker, and name is the name of the hacker. 
+![1-1](https://user-images.githubusercontent.com/49323906/213239012-000c8cf6-42f0-4d23-a36a-85d876e73859.png)
 
-•	Hackers: The hacker_id is the id of the hacker, and name is the name of the hacker.  
 •	Difficulty: The difficult_level is the level of difficulty of the challenge, and score is the score of the challenge for the difficulty level. 
+![1-2](https://user-images.githubusercontent.com/49323906/213239081-abfd4be2-b1b3-4d54-9fd0-079192e7a533.png)
+
 •	Challenges: The challenge_id is the id of the challenge, the hacker_id is the id of the hacker who created the challenge, and difficulty_level is the level of difficulty of the challenge. 
+![1-3](https://user-images.githubusercontent.com/49323906/213239139-c8983fff-89bc-4b19-884c-6cec0c195bd4.png)
+
 •	Submissions: The submission_id is the id of the submission, hacker_id is the id of the hacker who made the submission, challenge_id is the id of the challenge that the submission belongs to, and score is the score of the submission. 
- 
+ ![1-4](https://user-images.githubusercontent.com/49323906/213239190-d779dc6f-71dc-4be3-badb-993b42b953ce.png)
+
 
 ### SUBMISSION 1
 
@@ -36,6 +41,9 @@ GROUP BY hackers.hacker_id, hackers.name
 HAVING COUNT(submissions.challenge_id)>1
 
 ORDER BY COUNT(submissions.challenge_id) DESC, hackers.hacker_id;
+
+
+
 
 
 
