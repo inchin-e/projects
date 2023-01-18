@@ -12,7 +12,7 @@ The following tables contain contest data:
 •	Submissions: The submission_id is the id of the submission, hacker_id is the id of the hacker who made the submission, challenge_id is the id of the challenge that the submission belongs to, and score is the score of the submission. 
  
 
-### SUBMISSION 1
+#### SUBMISSION 1
 
 SELECT hackers.hacker_id,
         hackers.name
@@ -33,7 +33,7 @@ You are given three tables: Students, Friends and Packages. Students contains tw
  
 Write a query to output the names of those students whose best friends got offered a higher salary than them. Names must be ordered by the salary amount offered to the best friends. It is guaranteed that no two students got same salary offer.
 
-### SUBMISSION 2
+#### SUBMISSION 2
 
 SELECT s.name
 FROM students AS s
@@ -57,7 +57,7 @@ The following tables contain data on the wands in Ollivander's inventory:
  
 •	Wands_Property: The code is the code of the wand, age is the age of the wand, and is_evil denotes whether the wand is good for the dark arts. If the value of is_evil is 0, it means that the wand is not evil. The mapping between code and age is one-one, meaning that if there are two pairs, (code1 and age1)  and (code2 and age2) , then code1≠code2 and age1≠age2.
  
-### SUBMISSION 3
+#### SUBMISSION 3
 
 SELECT wands.id,
        wands_property.age,
