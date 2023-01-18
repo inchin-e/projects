@@ -23,7 +23,7 @@ The following tables contain contest data:
  ![1-4](https://user-images.githubusercontent.com/49323906/213239190-d779dc6f-71dc-4be3-badb-993b42b953ce.png)
 
 
-### SUBMISSION 1
+## SUBMISSION 1 ##
 
 
 SELECT hackers.hacker_id,
