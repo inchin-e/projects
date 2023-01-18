@@ -5,7 +5,9 @@ Julia just finished conducting a coding contest, and she needs your help assembl
 Input Format
 
 The following tables contain contest data:
- 
+
+ ![1-1](https://user-images.githubusercontent.com/49323906/213238312-0703d319-82ea-4782-a84e-7c3d06e07a41.png)
+
 •	Hackers: The hacker_id is the id of the hacker, and name is the name of the hacker.  
 •	Difficulty: The difficult_level is the level of difficulty of the challenge, and score is the score of the challenge for the difficulty level. 
 •	Challenges: The challenge_id is the id of the challenge, the hacker_id is the id of the hacker who created the challenge, and difficulty_level is the level of difficulty of the challenge. 
