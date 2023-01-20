@@ -54,20 +54,31 @@ ORDER BY COUNT(submissions.challenge_id) DESC, hackers.hacker_id;
 ## PROBLEM 2 (Placements)
 
 You are given three tables: Students, Friends and Packages. Students contains two columns: ID and Name. Friends contains two columns: ID and Friend_ID (ID of the ONLY best friend). Packages contains two columns: ID and Salary (offered salary in $ thousands per month).
+
+![2-1](https://user-images.githubusercontent.com/92373060/213660565-c79df78a-7a37-40d4-a5df-d678e8017128.png)
  
 Write a query to output the names of those students whose best friends got offered a higher salary than them. Names must be ordered by the salary amount offered to the best friends. It is guaranteed that no two students got same salary offer.
 
-#### SUBMISSION 2
+## SUBMISSION 2 ##
 
 SELECT s.name
+
 FROM students AS s
+
 INNER JOIN packages AS p ON p.id=s.id
+
 INNER JOIN friends AS f ON f.id=s.id
+
 INNER JOIN packages AS pc ON pc.id=f.friend_id
+
 WHERE pc.salary > p.salary
+
 ORDER BY pc.salary;
 
-
+&nbsp; 
+&nbsp; 
+&nbsp; 
+&nbsp;
 
 ## PROBLEM 3 
 
