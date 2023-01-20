@@ -54,22 +54,33 @@ ORDER BY COUNT(submissions.challenge_id) DESC, hackers.hacker_id;
 ## PROBLEM 2 (Placements)
 
 You are given three tables: Students, Friends and Packages. Students contains two columns: ID and Name. Friends contains two columns: ID and Friend_ID (ID of the ONLY best friend). Packages contains two columns: ID and Salary (offered salary in $ thousands per month).
+
+![2-1](https://user-images.githubusercontent.com/92373060/213659532-7c4fe6e0-df46-4152-aaaf-f71e29841c35.png)
  
 Write a query to output the names of those students whose best friends got offered a higher salary than them. Names must be ordered by the salary amount offered to the best friends. It is guaranteed that no two students got same salary offer.
 
 #### SUBMISSION 2
 
 SELECT s.name
+
 FROM students AS s
+
 INNER JOIN packages AS p ON p.id=s.id
+
 INNER JOIN friends AS f ON f.id=s.id
+
 INNER JOIN packages AS pc ON pc.id=f.friend_id
+
 WHERE pc.salary > p.salary
+
 ORDER BY pc.salary;
 
+&nbsp; 
+&nbsp; 
+&nbsp; 
+&nbsp;
 
-
-## PROBLEM 3 
+## PROBLEM 3 (Ollivander's Inventory)
 
 Harry Potter and his friends are at Ollivander's with Ron, finally replacing Charlie's old broken wand.
 Hermione decides the best way to choose is by determining the minimum number of gold galleons needed to buy each non-evil wand of high power and age. Write a query to print the id, age, coins_needed, and power of the wands that Ron's interested in, sorted in order of descending power. If more than one wand has same power, sort the result in order of descending age.
@@ -77,21 +88,37 @@ Hermione decides the best way to choose is by determining the minimum number of 
 Input Format
 
 The following tables contain data on the wands in Ollivander's inventory:
+
 •	Wands: The id is the id of the wand, code is the code of the wand, coins_needed is the total number of gold galleons needed to buy the wand, and power denotes the quality of the wand (the higher the power, the better the wand is).
+
+![3-1](https://user-images.githubusercontent.com/92373060/213659808-a1fc7c2b-3d8f-4d70-81e6-ae20c70bc78e.png)
  
 •	Wands_Property: The code is the code of the wand, age is the age of the wand, and is_evil denotes whether the wand is good for the dark arts. If the value of is_evil is 0, it means that the wand is not evil. The mapping between code and age is one-one, meaning that if there are two pairs, (code1 and age1)  and (code2 and age2) , then code1≠code2 and age1≠age2.
- 
+
+ ![3-2](https://user-images.githubusercontent.com/92373060/213659865-e2a0c603-762b-47e7-8f4b-21a37cc10236.png)
+
 #### SUBMISSION 3
 
 SELECT wands.id,
-       wands_property.age,
-       wands.coins_needed,
-       wands.power
+
+   wands_property.age,
+       
+   wands.coins_needed,
+       
+   wands.power
+   
 FROM wands
+
 INNER JOIN wands_property ON wands_property.code=wands.code
+
 WHERE wands.coins_needed = (SELECT MIN(W.coins_needed)
+
                         FROM wands W INNER JOIN Wands_Property WP
+                        
                         ON W.code = WP.code
+                        
                         WHERE wands.power = W.power AND 
+                        
                         wands_property.age = WP.age AND WP.is_evil = 0)
+                        
 ORDER BY wands.power DESC, wands_property.age DESC;
